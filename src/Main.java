@@ -19,7 +19,7 @@ public class Main {
             return s;
         }
         if (phone.length() == 11) {
-
+//ghggg
             if (phone.startsWith("8")) {
                 tel = tel.replaceFirst("8", "7");
             }
