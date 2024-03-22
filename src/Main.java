@@ -14,16 +14,20 @@ public class Main {
     public static String formatPhone(String tel) {
         String regex = "[^0-9]";
         String phone = tel.replaceAll(regex, "");
+        if (phone.length() == 10) {
+            System.out.println("7" + phone);
+        }
         if (phone.length() > 11 || phone.length() < 10 || phone.startsWith("9")) {
             String s = "Введен неверный формат";
             return s;
         }
         if (phone.length() == 11) {
-//ghggg
+
             if (phone.startsWith("8")) {
                 tel = tel.replaceFirst("8", "7");
             }
+
         }
-            return tel.replaceAll(regex, "");
-        }
+        return tel.replaceAll(regex, "");
     }
+}
